@@ -28,12 +28,19 @@ namespace FacebookProject
 
             Console.WriteLine(friends.Count);
 
-            for (int i = 0; i < friends.Count; i++) if ([i] <= 5)
+            for (int i = 0; i < friends.Count; i++) 
 
+                if(i > 5)
+                {
+
+                    driver.Close();
+                    Environment.Exit(1);
+                }
+
+                else
                 {
                     Console.WriteLine(friends[i].Text);
                 }
-
 
         }
 
